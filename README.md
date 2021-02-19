@@ -18,10 +18,10 @@ and run the image with `$HOME/valheim-server-config` volume mounted to `/config`
 ```
 $ mkdir -p $HOME/valheim-server-config/worlds
 # copy existing world
-$ docker run -d \
+$ sudo docker run -d \
     --name valheim-server \
     -p 2456-2458:2456-2458/udp \
-    -v ./valheim-server-config:/config \
+    -v ${HOME}/valheim-server-config/valheim-server-config:/config \
     -e SERVER_NAME="Pisti Valheim" \
     -e WORLD_NAME="WorldOne" \
     -e SERVER_PASS="ppbig" \
