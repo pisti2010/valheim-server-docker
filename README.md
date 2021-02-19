@@ -21,10 +21,10 @@ $ mkdir -p $HOME/valheim-server-config/worlds
 $ docker run -d \
     --name valheim-server \
     -p 2456-2458:2456-2458/udp \
-    -v $HOME/valheim-server-config:/config \
-    -e SERVER_NAME="My Server" \
-    -e WORLD_NAME="Neotopia" \
-    -e SERVER_PASS="secret" \
+    -v ./valheim-server-config:/config \
+    -e SERVER_NAME="Pisti Valheim" \
+    -e WORLD_NAME="WorldOne" \
+    -e SERVER_PASS="ppbig" \
     lloesche/valheim-server
 ```
 
